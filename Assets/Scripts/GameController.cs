@@ -21,6 +21,8 @@ public class GameController : MonoBehaviour
     private Vector3 difficultyIncreaseVector = new Vector3(0, 1, 0);
     private float startingSpawnerEdgeHeight;
 
+    private float maxEnemySpawnWaitTime = 3.0F;
+
     private WaitForSeconds waitTime = new WaitForSeconds(2F);
 
     private int score = 0;
@@ -102,7 +104,7 @@ public class GameController : MonoBehaviour
 
         enemy.SetActive(true);
 
-        Invoke(nameof(SpawnEnemy), Random.Range(1, 4));
+        Invoke(nameof(SpawnEnemy), Random.Range(0, maxEnemySpawnWaitTime));
     }
 
     private Vector2 RandomEnemySpawnPosition()
