@@ -11,7 +11,6 @@ public class EnemyController : MonoBehaviour, IResettable
     [SerializeField]
     private Rigidbody2D rb;
 
-    private float downAcceleration;
     private MovementDirection movementDirection;
     private WaitForSeconds waitForSeconds;
 
@@ -54,17 +53,8 @@ public class EnemyController : MonoBehaviour, IResettable
                 }                
         }
 
-        //waitForSeconds = new WaitForSeconds(Random.Range(0.1F, 1.0F));
-        downAcceleration = RandomDownAcceleration();
         rb.gravityScale += RandomDownAcceleration();
-        //StartCoroutine(SinkDownRoutine());
     }
-
-    //IEnumerator SinkDownRoutine()
-    //{
-    //    yield return waitForSeconds;
-    //    rb.gravityScale += downAcceleration;
-    //}
 
     private float RandomDownAcceleration()
     {
