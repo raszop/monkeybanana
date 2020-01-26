@@ -77,6 +77,5 @@ public class EnemyController : MonoBehaviour, IResettable
         transform.rotation = Quaternion.Euler(0, 0, 0);
         rb.velocity = Vector2.zero;
         rb.gravityScale = 0;
-        StopAllCoroutines();
     }
 }
