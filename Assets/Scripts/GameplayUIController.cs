@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class GameplayUIController : MonoBehaviour
 {
     [SerializeField]
-    GameController gameController;
+    private GameController gameController;
     [SerializeField]
     private Text scoreText;
     [SerializeField]

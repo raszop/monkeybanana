@@ -28,5 +28,6 @@ public class BulletController : MonoBehaviour, IResettable
     public void ResetGameObject()
     {
         gameObject.SetActive(false);
+        rb.velocity = Vector2.zero;
     }
 }

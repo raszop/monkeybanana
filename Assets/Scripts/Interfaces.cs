@@ -1,4 +1,4 @@
-﻿public interface IResettable
+﻿interface IResettable
 {
     void ResetGameObject();
 }

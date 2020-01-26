@@ -15,7 +15,7 @@ public class GameController : MonoBehaviour
     [SerializeField]
     private PlayerShootingController playerShootingController;
     [SerializeField]
-    GameplayUIController uiController;
+    private GameplayUIController uiController;
 
     private Vector2 startingPlayerPosition = new Vector2(0F, -3F);
     private Vector3 difficultyIncreaseVector = new Vector3(0, 1, 0);
@@ -87,7 +87,7 @@ public class GameController : MonoBehaviour
         }
     }
 
-    void ShootBullet()
+    private void ShootBullet()
     {
         GameObject bullet = GetObjectFromPool(bulletsPool);
         bullet.transform.position = player.transform.position;
@@ -95,7 +95,7 @@ public class GameController : MonoBehaviour
         bullet.SetActive(true);
     }
 
-    void SpawnEnemy()
+    private void SpawnEnemy()
     {
         GameObject enemy = GetObjectFromPool(enemiesPool);
         enemy.transform.position = RandomEnemySpawnPosition();
